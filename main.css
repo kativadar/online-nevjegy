@@ -43,4 +43,89 @@ table {
 	border-spacing: 0;
 }
 
-/**/
+/* ==== BASE STYLES ==== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gentium Book Basic', serif, Arial, sans-serif;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	color: #333;
+	text-align: center;
+	padding: 0.3125rem;
+	background: url(assets/IMG_20200907-036.JPG) no-repeat center center fixed;
+  background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+.profile-card {
+  height: auto;
+	width: 90%;
+	max-width: calc(100vw - 10%);
+	margin: 0 auto;
+	padding: 0.625rem;
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 0.3125rem;
+  box-shadow: hsla(0, 0%, 0%, .8) 0.625rem 0.625rem 5rem;
+}
+
+h1, h2 {
+  font-family: 'Alfa Slab One', cursive, 'Times New Roman', serif;
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2, p.about {
+	font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+	letter-spacing: 0.75rem;
+}
+
+a:link, a:visited {
+  color: rgb(0, 128, 89);
+  text-align: center;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  transform: scale(1.08);
+	filter: invert(82%);
+}
+
+h1,h2,body,.profile-card,.head,.content,.about,.place {
+    margin-bottom: 0.75rem;
+}
+
+img {
+  height: 120px;
+	width: 120px;
+	border: rgb(0, 128, 89);
+	border-style: double;
+  border-radius: 50%;
+	margin-top: -60px;	
+}
+
+img:hover {
+  transform: scale(1.1);
+	filter: opacity(90%)
+}
+
+@media (min-width: 768px) {
+	.profile-card {
+			top: 0;
+			width: 33.3%;
+		}
+}
