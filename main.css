@@ -62,7 +62,7 @@ body {
 	width: 100vw;
 }
 
-.profile-card {
+.container {
   height: auto;
 	width: 90%;
 	max-width: calc(100vw - 10%);
@@ -81,7 +81,7 @@ h1 {
 	font-size: 1.5rem;
 }
 
-h2, p.about {
+h2, .main {
 	font-size: 1rem;
 }
 
@@ -105,8 +105,8 @@ a:hover, a:active {
 	filter: invert(82%);
 }
 
-h1,h2,body,.profile-card,.head,.content,.about,.place {
-    margin-bottom: 0.75rem;
+h1,h2,body,.container,.header,.main,.place {
+    margin-bottom: 1rem;
 }
 
 img {
@@ -124,7 +124,7 @@ img:hover {
 }
 
 @media (min-width: 768px) {
-	.profile-card {
+	.container {
 			top: 0;
 			width: 33.3%;
 		}
