@@ -43,6 +43,24 @@ table {
 	border-spacing: 0;
 }
 
+/* helper color 
+#aside {
+	background-color: darkgreen;
+}
+
+#header {
+	background-color: rgba(255,120,0,0.5);
+}
+
+#main {
+	background-color: darksalmon;
+}
+
+#footer {
+	background-color: darkseagreen;
+}
+
+
 /* ==== BASE STYLES ==== */
 * {
 	box-sizing: border-box;
@@ -50,30 +68,86 @@ table {
 
 body {
   font-family: 'Gentium Book Basic', serif, Arial, sans-serif;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	color: #333;
-	text-align: center;
-	padding: 0.3125rem;
+  color: #333;
 	background: url(assets/IMG_20200907-036.JPG) no-repeat center center fixed;
+	backdrop-filter: grayscale(80%);
   background-size: cover;
 	height: 100vh;
 	width: 100vw;
 }
 
-.container {
-  height: auto;
-	width: 90%;
-	max-width: calc(100vw - 10%);
-	margin: 0 auto;
-	padding: 0.625rem;
-  background-color: hsla(0, 0%, 100%, .5);
-  border-radius: 0.925rem;
-  box-shadow: hsla(0, 0%, 0%, .8) 0.625rem 0.625rem 5rem;
+body, #aside, #main, #footer {
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
 
-h1, h2 {
+.container {
+	width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: rgba(196, 189, 189, 0.5);
+	border-radius: 0.3125rem;
+  box-shadow: hsla(0, 0%, 0%, .8) 0.625rem 0.625rem 5rem;
+	position: relative;
+}
+
+.box {
+	position: absolute;
+}
+
+#aside {
+	height: 100%;
+	width: 50%;
+	float: right;
+	left: 0;
+	margin: 0 auto;
+}
+
+.picture {
+	max-width: calc(25vw - 3%);
+	border-radius: 0.3125rem;
+}
+
+#header {
+	height: 30%;
+	width: 50%;
+	right: 0;
+}
+
+.name {
+	padding-top: 0.75rem;
+}
+
+.name, .hash, .place, .about {
+	margin: 0.75rem;
+}
+
+.hash {
+	font-style: italic;
+	display: inline;
+}
+
+.hash:hover {
+	text-decoration: underline;
+	color: rgb(216, 201, 116);
+}
+
+#main {
+	height: 60%;
+	width: 50%;
+	right: 0;
+	top: 30%;
+}
+
+#footer {
+	height: 10%;
+	width: 50%;
+	right: 0;
+	top: 90%;
+}
+
+h1, h2, h3 {
   font-family: 'Alfa Slab One', cursive, 'Times New Roman', serif;
 }
 
@@ -81,7 +155,7 @@ h1 {
 	font-size: 1.5rem;
 }
 
-h2, .main {
+h2, .main, .hash {
 	font-size: 1rem;
 }
 
@@ -95,37 +169,58 @@ li {
 }
 
 a:link, a:visited {
-  color: rgb(0, 128, 89);
-  text-align: center;
+  color: rgb(44, 66, 138);
   display: inline-block;
 }
 
 a:hover, a:active {
-  transform: scale(1.08);
-	filter: invert(82%);
+	filter: invert(100%);
 }
 
-h1,h2,body,.container,.header,.main,.place {
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd, 
+p,figure, 
+pre,table,fieldset,hr,
+.container,#main {
     margin-bottom: 1rem;
 }
 
-img {
-  height: 120px;
-	width: 120px;
-	border: rgb(0, 128, 89);
-	border-style: double;
-  border-radius: 50%;
-	margin-top: -60px;	
-}
+@media (max-width: 420px) {
 
-img:hover {
-  transform: scale(1.1);
-	filter: opacity(90%)
-}
-
-@media (min-width: 768px) {
 	.container {
-			top: 0;
-			width: 33.3%;
-		}
+		height: 90vh;
+		width: 90vw;
+	}
+
+	#aside {
+		height: 30%;
+	}
+
+	.picture {
+		max-width: calc(50vw - 2%);
+	}
+
+	#header {
+		top: 30%;
+		height: 30%;
+	}
+
+	#main {
+		height: 30%;
+		top: 60%
+	}
+
+	#footer {
+		height: 10%;
+	}
+
+	#aside, #header, #main, #footer {
+		margin-bottom: 1.096%;
+	}
+
+	#aside, #header, #main, #footer {
+		float: none;
+		width: 100%;
+	}
+
 }
